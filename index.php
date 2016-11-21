@@ -1,21 +1,17 @@
-<h1>Evaluate ProductX Form</h1>
-
 <?php
-/*
-Database
-User:     admin
-Password: password
-Server:   http://mysql-forms-mthomas-forms.44fs.preview.openshiftapps.com
-Database: forms
-*/ ?>
+/**
+ * Front to the WordPress application. This file doesn't do anything, but loads
+ * wp-blog-header.php which does and tells WordPress to load the theme.
+ *
+ * @package WordPress
+ */
 
-<!--[if lte IE 8]>
-<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-<![endif]-->
-<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-<script>
-  hbspt.forms.create({
-    portalId: '106921',
-    formId: '8df4f15f-2f88-448f-be8c-30d5fecf53c5'
-  });
-</script>
+/**
+ * Tells WordPress to load the WordPress theme and output it.
+ *
+ * @var bool
+ */
+define('WP_USE_THEMES', true);
+
+/** Loads the WordPress Environment and Template */
+require( dirname( __FILE__ ) . '/wp-blog-header.php' );

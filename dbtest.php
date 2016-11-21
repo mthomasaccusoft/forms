@@ -5,16 +5,13 @@ $username = "admin";
 $password = "password";
 $databasename = "forms";
 
-try
-{
-    $conn = new PDO("mysql:host=$servername;dbname=$databasename", $username, $password);
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected successfully to $databasename@$servername";
+// Create connection
+$conn = mysqli_connect($servername, $username, $password);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
 }
-catch(PDOException $e)
-{
-    echo "Connection failed to $databasename@$servername: " . $e->getMessage();
-}
+echo "Connected successfully";
 
 ?>
